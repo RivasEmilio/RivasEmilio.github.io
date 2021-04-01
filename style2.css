@@ -12,7 +12,8 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(87, 87, 87) !important;
+    background: url("media/bg1.jpg");
+    background-size: cover;
     --title-load-time: 800ms
 }
 .container1{
@@ -59,7 +60,7 @@ body
     left: -75px;
     top: calc(50% - 75px);
     transition: 0.5s ease-in-out;
-    background: #5b81e9;
+    background: #7a89c0;
 }
 
 .container1 .card1 .imgBx:before{
@@ -110,7 +111,7 @@ body
     display: inline-block;
     margin-top: 10px;
     padding: 5px 10px;
-    background: #587feb;
+    background: #7a89c0;
     text-decoration: none;
     color: #fff;
 }

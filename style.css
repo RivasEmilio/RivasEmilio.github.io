@@ -13,7 +13,8 @@ body {
     align-items: center;
     min-height: 100vh;
     background: radial-gradient(rgb(32, 32, 32), rgb(0, 0, 0)) !important;
-    --title-load-time: 800ms
+    --title-load-time: 800ms;
+    overflow: hidden;
 }
 
 #text {
@@ -42,6 +43,8 @@ body {
     animation-duration: var(--title-load-time);
     animation-timing-function: ease-in;
     animation-delay: var(--title-load-time);
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .btn {
@@ -102,8 +105,15 @@ body {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 800px) {
     #text {
-        font-weight: 700;
+        font-weight: 500;
+        font-size: 7em;
+    }
+
+    #text2 {
+        font-weight: 500;
+        font-size: 1.5em;
     }
 }
+
