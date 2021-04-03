@@ -12,9 +12,9 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("media/bg1.jpg");
-    background-size: cover;
-    --title-load-time: 800ms
+    background: url("media/bg2.png");
+    background-size: fill;
+    --title-load-time: 100ms
 }
 .container1{
 

@@ -12,7 +12,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(rgb(32, 32, 32), rgb(0, 0, 0)) !important;
+    background: url("media/bg2.png");
+    background-size: fill;
     --title-load-time: 800ms;
     overflow: hidden;
 }
@@ -25,10 +26,6 @@ body {
     line-height: 0.9em;
     letter-spacing: 2px;
     text-align: center;
-    animation-name: title-load;
-    animation-duration: var(--title-load-time);
-    animation-timing-function: ease-in;
-    animation-delay: var(--title-load-time);
 }
 
 #text2 {
@@ -39,10 +36,6 @@ body {
     line-height: 0.9em;
     letter-spacing: 2px;
     text-align: center;
-    animation-name: subtitle-load;
-    animation-duration: var(--title-load-time);
-    animation-timing-function: ease-in;
-    animation-delay: var(--title-load-time);
     margin-top: 150px;
     margin-bottom: 150px;
 }
@@ -85,25 +78,7 @@ body {
     width: 100%;
 }
 
-@keyframes title-load {
-    0% {
-        transform: translateX(-100%);
-    }
 
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes subtitle-load {
-    0% {
-        transform: translateX(50%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
 
 @media (max-width: 800px) {
     #text {
