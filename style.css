@@ -98,7 +98,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    background-color: gray;
+    background-color: rgb(85, 85, 85);
     width: 0%;
     height: 100%;
 
@@ -160,7 +160,7 @@ body {
     left: -75px;
     top: calc(50% - 75px);
     transition: 0.5s ease-in-out;
-    background: #7a89c0;
+    background: #7e93ee;
 }
 
 .container1 .card1 .imgBx:before{
@@ -217,7 +217,7 @@ body {
     display: inline-block !important;
     margin-top: 10px !important;
     padding: 5px 10px;
-    background: #7a89c0;
+    background: #7e93ee;
     text-decoration: none;
     color: #fff;
 }
