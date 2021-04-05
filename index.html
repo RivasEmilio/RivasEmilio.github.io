@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="media/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Emilio Rivas</title>
@@ -20,40 +21,39 @@
     </div>
 
     <main data-barba="container" data-barba-namespace="home-section">
-        <div class="container">
-
-            <div id="text" class="animate-this">
-                Emilio Rivas
+            <div class="d-flex flex-row cnt1">
+                <div class="animate-this d-flex flex-column">
+                    <div id="text">
+                        Emilio Rivas
+                    </div>
+        
+                    <div id="text2">
+                        -Software Engineering-
+                    </div>
+                    <div class="btcon">
+                        <a href="home.html" class="btn btn1">Lets go!</a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="d-flex flex-column">
+                        <img src="media/logo.png" alt="#" class="logo">
+                    </div>
+                </div>
+                
             </div>
-
-            <div id="text2">
-                -Software Engineering-
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="home.html" class="btn btn1">Lets go!</a>
-            </div>
-        </div>
-        <script>
-            var text = document.getElementById('text');
-            var shadow = '';
-            for (let index = 0; index < 19; index++) {
-    
-                shadow += (shadow ? ',' : '') + index * 1 + 'px ' + index * 1 + 'px 0 #838383';
-            }
-            text.style.textShadow = shadow;
-        </script>
     </main>
 
    
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script>
+    <script src="index.js"></script>
 
 
 </body>
