@@ -258,7 +258,7 @@ body::-webkit-scrollbar{
 
     nav ul {
         width: 100% !important;
-        top: 50px !important;
+        top: 0px !important;
         display: none !important;
     }
 
@@ -272,12 +272,12 @@ body::-webkit-scrollbar{
         display: block !important;
         text-align: center !important;
         color: white !important;
-        background: rgba(0, 0, 0, 0.5) !important;
+        background: rgba(0, 0, 0) !important;
     }
 
     nav .toggle{
-        right: 10px;
-        display: block;
+        right: 10px !important;
+        display: block !important;
     }
 }
 
