@@ -105,3 +105,19 @@ const options = {
   document.querySelectorAll(".reveal").forEach(reveal => {
     revealObserver.observe(reveal);
   });
+
+  $(window).on('scroll', function() {
+    if($(window).scrollTop()){
+      $('nav').addClass('black');
+    }
+    else 
+    {
+      $('nav').removeClass('black');
+    }
+  })
+
+  $(document).ready(function(){
+    $('.toggle').click(function(){
+      $('ul').toggleClass('active1');
+    })
+  })

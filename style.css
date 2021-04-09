@@ -15,7 +15,14 @@ body {
     background: url("media/bg2.png");
     background-size: fill;
     --title-load-time: 800ms;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 #text {
@@ -243,6 +250,34 @@ body {
     .container1 .card1 .content1 p {
         margin-top: 0px;
     }
+
+    nav{
+        padding: 0 0 !important;
+    }
+
+    nav ul {
+        width: 100% !important;
+        top: 80px !important;
+        display: none !important;
+    }
+
+    nav ul.active1{
+        display: block !important;
+    }
+
+    nav ul li a {
+
+        margin: 0 !important;
+        display: block !important;
+        text-align: center !important;
+        color: white !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    nav .toggle{
+        right: 10px;
+        display: block;
+    }
 }
 
 @media (max-width: 800px) {
@@ -305,5 +340,96 @@ body {
     .btcon, .textcol, .contCard{
         justify-content: center;
     }
+    .parallax{
+        width: 100%!important;
+    }
+
+  
 }
 
+.parallax {
+    height: 1080px;
+    width: 100vw;
+    background: url("media/Banner1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+
+}
+
+.parallax h1{
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+nav .logo1{
+    float: left;
+}
+
+nav .logo1 img {
+    height: 80px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+nav ul {
+
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: .5;
+}
+
+nav ul li{
+
+    list-style: none;
+}
+
+nav ul li a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+     background: rgb(80, 80, 80);
+     color: white;
+}
+
+nav.black{
+    background: rgba(0, 0, 0, 0.794);
+}
+
+.toggle{
+
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 26px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
