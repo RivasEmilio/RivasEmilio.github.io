@@ -258,7 +258,7 @@ body::-webkit-scrollbar{
 
     nav ul {
         width: 100% !important;
-        top: 80px !important;
+        top: 50px !important;
         display: none !important;
     }
 
@@ -420,7 +420,7 @@ nav ul li a.active{
 }
 
 nav.black{
-    background: rgba(0, 0, 0, 0.794);
+    background: rgba(0, 0, 0);
 }
 
 .toggle{
