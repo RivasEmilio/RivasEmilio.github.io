@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("media/bg2.png");
+    background: url("media/bg1.png");
     background-size: fill;
     --title-load-time: 800ms;
     overflow-x: hidden;
@@ -26,20 +26,34 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+.cnt1{
+    left: 0 !important;
+    width: 100vw;
+    margin-left: 400px;
+    position: relative;
+}
+.textcol{
+    float: left;
+    width: 1000px;
+    margin-right: 150px;
+    left: 0;
+    
+}
+
 #text {
     position: relative;
     color: #fff;
     font-weight: 700;
-    font-size: 11em;
+    font-size: 10em;
     line-height: 0.9em;
     letter-spacing: 2px;
     text-align: left;
-    margin-right: 140px;
 }
 
 .logo{
     border-radius: 50%;
     width: 400px;
+    border: 4px solid rgb(255, 255, 255);
 }
 
 #text2 {
@@ -102,7 +116,9 @@ body::-webkit-scrollbar{
     width: 0%;
     height: 100%;
 }
-
+.btcon{
+    width: 214px;
+}
 .load-container{
 
     position: fixed;
@@ -118,7 +134,7 @@ body::-webkit-scrollbar{
 .container1{
 
     position: relative;
-    width: 1000px;
+    width: 1100px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -132,7 +148,7 @@ body::-webkit-scrollbar{
     background: #fff;
     display: flex;
     width: 45%;
-    margin: 30px 0;
+    margin: 40px 0px;
 }
 
 .container1 .card1 .imgBx{
@@ -156,10 +172,10 @@ body::-webkit-scrollbar{
 
     width: 150px;
     height: 150px;
-    left: -75px;
+    left: -110px ;
     top: calc(50% - 75px);
     transition: 0.5s ease-in-out;
-    background: #7e93ee;
+    background: rgb(114, 114, 114);
 }
 
 .container1 .card1 .imgBx:before{
@@ -178,14 +194,14 @@ body::-webkit-scrollbar{
 
 .container1 .card1 .imgBx img{
 
-    max-width: 100px;
+    max-width: 120px;
     margin-top: 50px;
     transition: 0.5s ease-in-out;
 }
 
 .container1 .card1:hover .imgBx img{
 
-    max-width: 75px;
+    max-width: 80px;
 }
 
 .container1 .card1 .content1{
@@ -217,7 +233,7 @@ body::-webkit-scrollbar{
     display: inline-block !important;
     margin-top: 10px !important;
     padding: 5px 10px;
-    background: #7e93ee;
+    background: rgb(114, 114, 114);
     text-decoration: none;
     color: #fff;
 }
@@ -225,20 +241,55 @@ body::-webkit-scrollbar{
 @media (max-height: 1080px){
     #text2 {
         
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-}
-
-@media (min-width: 1080px){
-    .cnt1 {
-        
-        margin-left: 50px;
+        margin-top: 50px;
+        margin-bottom: 200px;
     }
 }
 
 @media (max-width: 992px){
 
+    .cnt1{
+        width: 100vw;
+        flex-direction: column;
+        margin-left: 0px;
+        height: 100%;
+        text-align: center !important;
+    }
+
+    #text p, #text2 p{
+        text-align: center !important;
+        flex-direction: column;
+    }
+
+    #text, #text2 {
+        width: 100vw;
+    }
+
+    #text p{
+        font-size: 3rem;
+    }
+
+    #text2 p{
+        font-size: 1.5rem;
+    }
+
+    .cnt2{
+        justify-content: center;
+        width: 100vw;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .btcon{
+        text-align: center;
+        margin-left: 80px;
+
+    }
+
+    .reveal{
+        display: none !important;
+    }
     .container1{
         width: 100%;
         flex-direction: column;
@@ -251,22 +302,25 @@ body::-webkit-scrollbar{
     .container1 .card1 .content1 p {
         margin-top: 0px;
     }
+}
 
-    nav{
+@media (max-width: 768px){
+    .nav{
         padding: 0 0 !important;
+        width: 100vw !important;
     }
 
-    nav ul {
+    .nav ul {
         width: 100% !important;
         top: 0px !important;
         display: none !important;
     }
 
-    nav ul.active1{
+    .nav ul.active1{
         display: block !important;
     }
 
-    nav ul li a {
+    .nav ul li a {
 
         margin: 0 !important;
         display: block !important;
@@ -275,25 +329,11 @@ body::-webkit-scrollbar{
         background: rgba(0, 0, 0) !important;
     }
 
-    nav .toggle{
+    .nav .toggle{
         right: 10px !important;
         display: block !important;
     }
-}
 
-@media (max-width: 800px) {
-    #text {
-        font-weight: 500;
-        font-size: 7em;
-    }
-
-    #text2 {
-        font-weight: 500;
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 768px){
     .container1 .card1 {
         max-width: 300px;
         flex-direction: column;
@@ -332,21 +372,14 @@ body::-webkit-scrollbar{
     .logo{
         width: 0px;
     }
-
-    #text, #text2{
-        margin-right: 0;
-        text-align: center;
-    }
-
     .btcon, .textcol, .contCard{
         justify-content: center;
     }
     .parallax{
         width: 100%!important;
     }
-
-  
 }
+
 
 .parallax {
     height: 1080px;
@@ -365,7 +398,7 @@ body::-webkit-scrollbar{
     vertical-align: middle;
 }
 
-nav{
+.nav{
     position: fixed;
     top: 0;
     left: 0;
@@ -376,17 +409,17 @@ nav{
     transition: .5s;
 }
 
-nav .logo1{
+.nav .logo1{
     float: left;
 }
 
-nav .logo1 img {
+.nav .logo1 img {
     height: 80px;
     border-radius: 50%;
     transition: .5s;
 }
 
-nav ul {
+.nav ul {
 
     position: relative;
     float: right;
@@ -396,12 +429,12 @@ nav ul {
     transition: .5;
 }
 
-nav ul li{
+.nav ul li{
 
     list-style: none;
 }
 
-nav ul li a {
+.nav ul li a {
     position: relative;
     display: block;
     padding: 10px 20px;
@@ -413,13 +446,13 @@ nav ul li a {
     transition: .5s;
 }
 
-nav ul li a:hover,
-nav ul li a.active{
+.nav ul li a:hover,
+.nav ul li a.active{
      background: rgb(80, 80, 80);
      color: white;
 }
 
-nav.black{
+.nav.black{
     background: rgba(0, 0, 0);
 }
 
