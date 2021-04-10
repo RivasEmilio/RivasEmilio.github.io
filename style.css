@@ -406,7 +406,7 @@ body::-webkit-scrollbar{
     height: 100px;
     padding: 10px 100px;
     box-sizing: border-box;
-    transition: .5s;
+    transition: 1.5s;
 }
 
 .nav .logo1{
@@ -448,12 +448,12 @@ body::-webkit-scrollbar{
 
 .nav ul li a:hover,
 .nav ul li a.active{
-     background: rgb(80, 80, 80);
+     background: rgba(80, 80, 80, 0.6);
      color: white;
 }
 
 .nav.black{
-    background: rgba(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .toggle{
