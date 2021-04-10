@@ -326,7 +326,7 @@ body::-webkit-scrollbar{
         display: block !important;
         text-align: center !important;
         color: white !important;
-        background: rgba(0, 0, 0) !important;
+        background: rgba(0, 0, 0, 0.7)!important;
     }
 
     .nav .toggle{
