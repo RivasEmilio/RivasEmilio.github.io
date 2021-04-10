@@ -245,6 +245,31 @@ body::-webkit-scrollbar{
         margin-bottom: 200px;
     }
 }
+@media (max-width: 1400px){
+    .cnt1{
+        margin-left: 50px;
+        flex-direction: row;
+    }
+
+    .logo{
+        width: 300px;
+    }
+    #text p{
+        font-size: 4rem;
+    }
+
+    #text2 p{
+        font-size: 2rem;
+    }
+    .textcol{
+        float: left;
+        width: 500px;
+        margin-right: 100px;
+        left: 0;
+        margin-left: 50px;
+        
+    }
+}
 
 @media (max-width: 1080px){
     .cnt1{
