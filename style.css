@@ -249,8 +249,11 @@ body::-webkit-scrollbar{
 }
 @media (max-width: 1400px){
     .cnt1{
-        margin-left: 50px;
         flex-direction: row;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        justify-content: center;
     }
 
     .logo{
@@ -268,7 +271,6 @@ body::-webkit-scrollbar{
         width: 500px;
         margin-right: 100px;
         left: 0;
-        margin-left: 50px;
         
     }
 }
