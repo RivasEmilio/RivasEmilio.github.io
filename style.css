@@ -51,6 +51,7 @@ body::-webkit-scrollbar{
     float: right;
     position: relative;
     background-repeat: no-repeat;
+    background-color: black;
 }
 
 #text {
@@ -259,7 +260,6 @@ body::-webkit-scrollbar{
         display: flex;
         align-items: center;
         justify-content: center;
-        background:black;
         text-align: center;
     }
 
@@ -267,30 +267,10 @@ body::-webkit-scrollbar{
         background-repeat: no-repeat;
     }
 
-    .logo{
-        width: 300px;
-    }
-    #text p{
-        color: white;
-    }
-
     #text2 p{
-        color: white;
         font-size: 2.5rem;
     }
-
-    .tbn{
-        color: rgb(255, 255, 255);
-        border: 2px solid rgb(255, 255, 255);
-    }
-    
-    .tbn::before{
-        background: rgb(255, 255, 255)!important;
-    }
-    
-    .tbn1:hover{
-        color: rgb(0, 0, 0) !important;
-    }
+  
     
 }
 
@@ -315,6 +295,19 @@ body::-webkit-scrollbar{
 
 @media (max-width: 992px){
 
+    .tbn{
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(255, 255, 255);
+    }
+    
+    .tbn::before{
+        background: rgb(255, 255, 255)!important;
+    }
+    
+    .tbn1:hover{
+        color: rgb(0, 0, 0) !important;
+    }
+
     .textcol{
         margin-right: 0px;
         margin-left: 0px;
@@ -330,13 +323,21 @@ body::-webkit-scrollbar{
         flex-direction: column;
         margin-left: 0px;
         height: 100%;
-        text-align: center !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background:black;
     }
 
     #text p, #text2 p{
         text-align: center !important;
         flex-direction: column;
+        color: white;
+        
     }
+   
+
+  
 
     #text, #text2 {
         width: 100vw;
