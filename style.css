@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Recursive', sans-serif;
-    color: white;
 }
 
 body {
@@ -13,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("media/bg1.png");
+    background: black;
     background-size: fill;
     --title-load-time: 800ms;
     overflow-x: hidden;
@@ -27,35 +26,41 @@ body::-webkit-scrollbar{
 }
 
 .cnt1{
-    left: 0 !important;
     width: 100vw;
-    margin-left: 400px;
+    height: 100vh;
     position: relative;
+    background-color: white;
 }
 .textcol{
     float: left;
-    width: 1000px;
-    margin-right: 150px;
+    width: 50%;
+    height: 100%;
     left: 0;
     display: flex;
     flex-direction: column;
-    
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.reveal{
+    background: url("media/Logo.jpeg");
+    width: 50%;
+    height: 100vh;
+    background-size: 100%;
+    float: right;
+    position: relative;
+    background-repeat: no-repeat;
 }
 
 #text {
     position: relative;
     color: #fff;
-    font-weight: 700;
-    font-size: 10em;
+    font-weight: 600;
+    font-size: 9em;
     line-height: 0.9em;
     letter-spacing: 2px;
-    text-align: left;
-}
-
-.logo{
-    border-radius: 50%;
-    width: 400px;
-    border: 4px solid rgb(255, 255, 255);
+    color: black;
 }
 
 #text2 {
@@ -68,17 +73,18 @@ body::-webkit-scrollbar{
     text-align: left;
     margin-top: 150px;
     margin-bottom: 150px;
+    color: black;
 }
 
 .tbn{
     position: relative;
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-family: 'Recursive', sans-serif;
     text-decoration: none;
     margin: 30px 0;
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     padding: 14px 60px;
     text-transform: uppercase;
     overflow: hidden;
@@ -86,7 +92,7 @@ body::-webkit-scrollbar{
 }
 
 .tbn::before{
-    background: white;
+    background: rgb(0, 0, 0)!important;
     content: "";
     position: absolute;
     top: 50%;
@@ -97,7 +103,7 @@ body::-webkit-scrollbar{
 }
 
 .tbn1:hover{
-    color: black;
+    color: rgb(255, 255, 255) !important;
 }
 .tbn1::before{
     width: 0;
@@ -252,27 +258,40 @@ body::-webkit-scrollbar{
         flex-direction: row;
         display: flex;
         align-items: center;
-        margin-left: 0px;
         justify-content: center;
+        background:black;
+        text-align: center;
+    }
+
+    .reveal{
+        background-repeat: no-repeat;
     }
 
     .logo{
         width: 300px;
     }
     #text p{
-        font-size: 4rem;
+        color: white;
     }
 
     #text2 p{
-        font-size: 2rem;
+        color: white;
+        font-size: 2.5rem;
     }
-    .textcol{
-        float: left;
-        width: 500px;
-        margin-right: 100px;
-        left: 0;
-        
+
+    .tbn{
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(255, 255, 255);
     }
+    
+    .tbn::before{
+        background: rgb(255, 255, 255)!important;
+    }
+    
+    .tbn1:hover{
+        color: rgb(0, 0, 0) !important;
+    }
+    
 }
 
 @media (max-width: 1080px){
@@ -291,14 +310,6 @@ body::-webkit-scrollbar{
     #text2 p{
         font-size: 2rem;
     }
-    .textcol{
-        float: left;
-        width: 500px;
-        margin-right: 100px;
-        left: 0;
-        margin-left: 50px;
-        
-    }
     
 }
 
@@ -311,6 +322,7 @@ body::-webkit-scrollbar{
         justify-content: center;
         text-align: center;
         width: 100%;
+        background: none;
     }
     .cnt1{
         width: 100vw;
@@ -346,8 +358,6 @@ body::-webkit-scrollbar{
         text-align: center;
         flex-direction: column;
     }
-
-   
 
     .reveal{
         display: none !important;
