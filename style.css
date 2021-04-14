@@ -252,7 +252,7 @@ body::-webkit-scrollbar{
     #text2 {
         
         margin-top: 50px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 }
 @media (max-width: 1400px){
@@ -303,6 +303,7 @@ body::-webkit-scrollbar{
         text-align: center;
         width: 100%;
         background: none;
+        background-color: black;
     }
     .cnt1{
         width: 100vw;
@@ -318,6 +319,7 @@ body::-webkit-scrollbar{
     #text p, #text2 p{
         text-align: center !important;
         flex-direction: column;
+        color: white;
         
     }
    
@@ -342,6 +344,24 @@ body::-webkit-scrollbar{
         display: flex;
         flex-direction: row;
         width: 100%;
+        background: url("media/logo2.jpeg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: rgb(255, 255, 255);
+        background-position: center;
+    }
+
+    .tbn{
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(255, 255, 255);
+    }
+    
+    .tbn::before{
+        background: rgb(255, 255, 255)!important;
+    }
+    
+    .tbn1:hover{
+        color: rgb(0, 0, 0) !important;
     }
     .container1{
         width: 100%;
