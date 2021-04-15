@@ -251,7 +251,8 @@ body::-webkit-scrollbar{
 @media (max-height: 1080px){
     #text2 {
         
-        margin-top: 50px;
+        margin-top: 50px ;
+        margin-bottom: 50px;
     }
 }
 @media (max-width: 1400px){
