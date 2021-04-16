@@ -248,9 +248,23 @@ body::-webkit-scrollbar{
     color: #fff;
 }
 .parallax {
+    background: url("media/Banner1.jpg");
+}
+
+.parallax2 {
+    background: url("media/Banner1.jpg");
+}
+
+.parallax3 {
+    background: url("media/Banner1.jpg");
+}
+
+.parallax4 {
+    background: url("media/Banner1.jpg");
+}
+.parallax, .parallax2, .parallax3, .parallax4 {
     height: 1080px;
     width: 100vw;
-    background: url("media/Banner1.jpg");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -259,7 +273,8 @@ body::-webkit-scrollbar{
 
 }
 
-.parallax h1{
+
+.parallax h1, .parallax2 h1, .parallax3 h1, .parallax4 h1{
     font-size: 10rem;
     text-align: center;
     vertical-align: middle;
@@ -490,7 +505,7 @@ body::-webkit-scrollbar{
         display: block !important;
         text-align: center !important;
         color: white !important;
-        background: rgba(0, 0, 0, 0.7)!important;
+        background: rgba(0, 0, 0)!important;
     }
 
     .nav .toggle{
@@ -539,10 +554,10 @@ body::-webkit-scrollbar{
     .btcon, .textcol, .contCard{
         justify-content: center;
     }
-    .parallax{
-        width: 100%!important;
+    .parallax, .parallax2, .parallax3, .parallax4{
+        width: 100% !important;
     }
-    .parallax h1{
+    .parallax h1, .parallax2 h1, .parallax3 h1, .parallax4 h1{
         font-size: 3rem;
     }
 }
