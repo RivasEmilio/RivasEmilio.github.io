@@ -249,24 +249,28 @@ body::-webkit-scrollbar{
 }
 .parallax {
     background: url("media/Banner1.jpg");
+    background-position: bottom;
 }
 
 .parallax2 {
-    background: url("media/Banner1.jpg");
+    background: url("media/Banner2.jpg");
+    background-position: top;
+    
 }
 
 .parallax3 {
-    background: url("media/Banner1.jpg");
+    background: url("media/Banner3.jpg");
+    background-position: left;
 }
 
 .parallax4 {
-    background: url("media/Banner1.jpg");
+    background: url("media/Banner4.jpg");
 }
+
 .parallax, .parallax2, .parallax3, .parallax4 {
     height: 1080px;
     width: 100vw;
     background-size: cover;
-    background-position: bottom;
     background-repeat: no-repeat;
     display: table;
     background-attachment: fixed;
@@ -280,7 +284,11 @@ body::-webkit-scrollbar{
     vertical-align: middle;
     color: rgb(255, 255, 255);
     display: table-cell; 
+    text-transform: uppercase;
 }
+
+
+
 
 .nav{
     position: fixed;
@@ -298,8 +306,8 @@ body::-webkit-scrollbar{
 }
 
 .nav .logo1 img {
-    height: 80px;
-    border-radius: 50%;
+    height: 70px;
+    border-radius: 10%;
     transition: .5s;
 }
 
@@ -332,12 +340,12 @@ body::-webkit-scrollbar{
 
 .nav ul li a:hover,
 .nav ul li a.active{
-     background: rgba(80, 80, 80, 0.6);
+     background: rgba(100, 100, 100, 0.7);
      color: white;
 }
 
 .nav.black{
-    background: rgba(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .toggle{
@@ -491,8 +499,13 @@ body::-webkit-scrollbar{
 
     .nav ul {
         width: 100% !important;
-        top: 0px !important;
+        top: 16px !important;
         display: none !important;
+    }
+
+    .nav .logo1{
+        margin-top: 10px;
+        margin-left: 10px;
     }
 
     .nav ul.active1{
@@ -505,12 +518,16 @@ body::-webkit-scrollbar{
         display: block !important;
         text-align: center !important;
         color: white !important;
-        background: rgba(0, 0, 0)!important;
+        background: rgba(0, 0, 0, 0.6)!important;
     }
 
     .nav .toggle{
         right: 10px !important;
         display: block !important;
+    }
+
+    .nav .toggle i{
+        font-size: 30px;
     }
 
     .container1 .card1 {
