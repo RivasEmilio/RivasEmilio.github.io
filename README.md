@@ -4,11 +4,11 @@ A modern, animated portfolio website built with React, Vite, and Framer Motion.
 
 ## Features
 
-- 🎨 Modern, responsive design
+- 🎨 Modern, responsive design with accent colors
 - ✨ Smooth animations with Framer Motion
 - 🚀 Fast performance with Vite
 - 📱 Mobile-friendly navigation
-- 🎯 Single Page Application (SPA) with React Router
+- 🎯 Single Page Application (SPA) with smooth scrolling
 
 ## Tech Stack
 
@@ -16,14 +16,14 @@ A modern, animated portfolio website built with React, Vite, and Framer Motion.
 - **Vite** - Build tool and dev server
 - **React Router** - Client-side routing
 - **Framer Motion** - Animation library
-- **CSS3** - Styling with modern features
+- **CSS3** - Modern styling with gradients and animations
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm or yarn
+- Node.js (v20 or higher)
+- npm
 
 ### Installation
 
@@ -55,29 +55,11 @@ npm run build
 
 The built files will be in the `dist` directory.
 
-## Deployment to GitHub Pages
+## Deployment
 
-### Automatic Deployment (Recommended)
+The project uses GitHub Actions for automatic deployment. Simply push to the `master` branch and the workflow will automatically build and deploy to GitHub Pages.
 
-The project includes a GitHub Actions workflow that automatically deploys to GitHub Pages when you push to the `main` branch.
-
-1. Make sure your repository is set to use GitHub Pages from the `gh-pages` branch
-2. Push your changes to the `main` branch
-3. The workflow will automatically build and deploy your site
-
-### Manual Deployment
-
-1. Build the project:
-```bash
-npm run build
-```
-
-2. Push the `dist` folder to the `gh-pages` branch:
-```bash
-git subtree push --prefix dist origin gh-pages
-```
-
-Or use the GitHub Pages deployment tool in your repository settings.
+Make sure GitHub Pages is configured to use **GitHub Actions** as the source in your repository settings.
 
 ## Project Structure
 
@@ -89,11 +71,9 @@ Or use the GitHub Pages deployment tool in your repository settings.
 │   │   └── Navigation.jsx
 │   ├── pages/          # Page components
 │   │   ├── Landing.jsx
-│   │   ├── Home.jsx
-│   │   ├── About.jsx
-│   │   ├── Work.jsx
-│   │   ├── Contact.jsx
-│   │   └── Development.jsx
+│   │   └── Portfolio.jsx
+│   ├── utils/          # Utility functions
+│   │   └── assets.js
 │   ├── App.jsx         # Main app component with routing
 │   ├── main.jsx        # Entry point
 │   └── index.css       # Global styles
@@ -101,20 +81,6 @@ Or use the GitHub Pages deployment tool in your repository settings.
 ├── vite.config.js      # Vite configuration
 └── package.json
 ```
-
-## Customization
-
-### Updating Content
-
-- Edit the page components in `src/pages/` to update content
-- Modify `src/components/Navigation.jsx` to change navigation links
-- Update styles in the respective `.css` files
-
-### Changing Colors and Styles
-
-- Global styles are in `src/index.css`
-- Component-specific styles are in their respective `.css` files
-- The color scheme can be customized by modifying CSS variables (if added) or direct color values
 
 ## License
 

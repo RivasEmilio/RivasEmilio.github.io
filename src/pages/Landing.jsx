@@ -5,31 +5,15 @@ import { getAssetPath } from '../utils/assets'
 import './Landing.css'
 
 const Landing = () => {
-  const [loading, setLoading] = useState(true)
-
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500)
     // Set CSS variables for background images
     document.documentElement.style.setProperty('--logo-bg', `url("${getAssetPath('media/Logo.jpeg')}")`)
     document.documentElement.style.setProperty('--logo2-bg', `url("${getAssetPath('media/logo2.jpeg')}")`)
     document.documentElement.style.setProperty('--bg1-bg', `url("${getAssetPath('media/bg1.png')}")`)
-    return () => clearTimeout(timer)
   }, [])
 
   return (
     <>
-      {loading && (
-        <motion.div
-          className="load-container"
-          initial={{ width: '0%' }}
-          animate={{ width: '100%' }}
-          exit={{ x: '100%' }}
-          transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
-        >
-          <div className="loading-screen" />
-        </motion.div>
-      )}
-      
       <motion.main
         className="cnt1"
         initial={{ opacity: 0 }}

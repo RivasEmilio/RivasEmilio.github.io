@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Navigation from '../components/Navigation'
 import { getAssetPath } from '../utils/assets'
 import './Portfolio.css'
 
 const Portfolio = () => {
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     // Set CSS variables for background images
@@ -12,10 +13,45 @@ const Portfolio = () => {
     document.documentElement.style.setProperty('--banner2-bg', `url("${getAssetPath('media/Banner2.jpg')}")`)
     document.documentElement.style.setProperty('--banner3-bg', `url("${getAssetPath('media/Banner3.jpg')}")`)
     document.documentElement.style.setProperty('--banner4-bg', `url("${getAssetPath('media/Banner4.jpg')}")`)
+    
+    // Loading screen
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1200)
+    
+    return () => clearTimeout(timer)
   }, [])
 
   return (
     <div className="portfolio-container">
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            className="portfolio-loader"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div
+              className="loader-content"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="loader-spinner"></div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="loader-text"
+              >
+                Loading...
+              </motion.p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
       <Navigation />
       
       {/* Hero Section */}
@@ -61,40 +97,6 @@ const Portfolio = () => {
         </motion.div>
       </motion.section>
 
-      {/* About Section */}
-      <Section id="about" className="about-section">
-        <div className="section-content">
-          <motion.h2
-            className="section-title"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            About Me
-          </motion.h2>
-          <motion.div
-            className="about-content"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <p>
-              Software Engineer II at Morgan Stanley with a passion for building scalable, reliable systems. 
-              I specialize in platform architecture, designing core frameworks that enable consistent engineering practices 
-              across distributed systems. My work focuses on standardizing error handling, API contracts, and service-to-service 
-              communication patterns that improve developer productivity and system reliability.
-            </p>
-            <p>
-              I hold a B.S. in Computer Engineering from Instituto Tecnológico y de Estudios Superiores de Monterrey with a 4.0 GPA, 
-              where I completed my dissertation on Stock Price Prediction Using Machine Learning. I'm passionate about modernizing 
-              legacy systems, improving code quality, and building tools that make developers' lives easier.
-            </p>
-          </motion.div>
-        </div>
-      </Section>
-
       {/* Development Section */}
       <Section id="development" className="development-section">
         <div className="section-content">
@@ -114,11 +116,6 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p>
-              I work with a diverse range of technologies to build robust, scalable systems. 
-              From backend services to frontend applications, I leverage modern tools and best practices 
-              to deliver high-quality solutions.
-            </p>
             <div className="tech-grid">
               {['Java', 'Python', 'C#', 'TypeScript', 'React.js', 'Vue.js', 'ASP.NET', 'Express.js', 'PostgreSQL', 'MySQL', 'Perl', 'Git', 'Linux', 'CI/CD'].map((tech, index) => (
                 <motion.div
@@ -157,10 +154,6 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p>
-              I've had the opportunity to work on impactful projects at Morgan Stanley, 
-              from modernizing legacy systems to building platform-wide frameworks that serve millions of users.
-            </p>
             <div className="experience-timeline">
               <div className="timeline-item">
                 <div className="timeline-dot" />
@@ -168,10 +161,10 @@ const Portfolio = () => {
                   <h3>Software Engineer II - Platform Architecture</h3>
                   <p className="timeline-date">Morgan Stanley, Atlanta, GA • February 2024 – Present</p>
                   <ul className="timeline-bullets">
-                    <li>Standardized engineering practices across 7 departments and 35+ teams by designing core architectural frameworks</li>
-                    <li>Architected reusable Python and Java libraries for shared utilities, reducing duplicated effort across teams</li>
-                    <li>Led modernization of E*TRADE's batch processing infrastructure, impacting 5.2M+ users</li>
-                    <li>Designed and implemented DUF (Data Upload Framework) for reliable mass data uploads</li>
+                    <li>Standardized engineering practices across 7 departments and 35+ teams</li>
+                    <li>Architected reusable Python and Java libraries reducing duplicated effort</li>
+                    <li>Led modernization of E*TRADE's batch processing, impacting 5.2M+ users</li>
+                    <li>Designed DUF (Data Upload Framework) for reliable mass data uploads</li>
                   </ul>
                 </div>
               </div>
@@ -181,8 +174,8 @@ const Portfolio = () => {
                   <h3>Summer Technology Analyst - Platform Architecture</h3>
                   <p className="timeline-date">Morgan Stanley, Atlanta, GA • June 2023 – August 2023</p>
                   <ul className="timeline-bullets">
-                    <li>Achieved 90%+ code coverage by developing comprehensive Java unit test suites</li>
-                    <li>Ensured reliability for five critical AML batch workflows during server migration</li>
+                    <li>Achieved 90%+ code coverage with comprehensive Java unit test suites</li>
+                    <li>Ensured reliability for critical AML batch workflows during migration</li>
                   </ul>
                 </div>
               </div>
@@ -192,8 +185,8 @@ const Portfolio = () => {
                   <h3>Summer Technology Analyst - Digital Engagement</h3>
                   <p className="timeline-date">Morgan Stanley, Atlanta, GA • June 2022 – August 2022</p>
                   <ul className="timeline-bullets">
-                    <li>Contributed to architectural transition from legacy trading system to next-generation platform</li>
-                    <li>Designed and implemented React.js UI components, improving trader efficiency and usability</li>
+                    <li>Contributed to architectural transition from legacy to next-generation platform</li>
+                    <li>Designed React.js UI components improving trader efficiency</li>
                   </ul>
                 </div>
               </div>
@@ -203,7 +196,7 @@ const Portfolio = () => {
                   <h3>Software Systems Management Intern</h3>
                   <p className="timeline-date">Santander Bank, Queretaro, Mexico • January 2021 - April 2021</p>
                   <ul className="timeline-bullets">
-                    <li>Validated system reliability across 10,000 ATMs through functional, stability, and security testing</li>
+                    <li>Validated system reliability across 10,000 ATMs</li>
                     <li>Tested cashier and biometric authorization systems across 1,000+ branches</li>
                   </ul>
                 </div>
@@ -318,7 +311,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities.</p>
             <div className="contact-info">
               <motion.a 
                 href="mailto:miles.fra.2000@gmail.com" 
@@ -327,14 +320,6 @@ const Portfolio = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <span>📧</span> miles.fra.2000@gmail.com
-              </motion.a>
-              <motion.a 
-                href="tel:+14709183222" 
-                className="contact-link"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span>📱</span> +1 (470) 918-3222
               </motion.a>
             </div>
           </motion.div>

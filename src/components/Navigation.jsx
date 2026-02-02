@@ -34,7 +34,6 @@ const Navigation = () => {
 
   const navLinks = [
     { path: '/portfolio', label: 'Home', scrollTo: 'top' },
-    { path: '/portfolio', label: 'About', scrollTo: 'about' },
     { path: '/portfolio', label: 'Development', scrollTo: 'development' },
     { path: '/portfolio', label: 'Work', scrollTo: 'work' },
     { path: '/portfolio', label: 'Education', scrollTo: 'education' },
