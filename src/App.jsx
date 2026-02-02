@@ -24,7 +24,7 @@ function AppRoutes() {
 
 function App() {
   // Handle GitHub Pages routing
-  const basename = import.meta.env.BASE_URL || '/RivasEmilio.github.io/'
+  const basename = import.meta.env.BASE_URL || '/'
   
   return (
     <Router basename={basename}>

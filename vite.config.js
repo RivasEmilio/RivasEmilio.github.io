@@ -18,7 +18,7 @@ export default defineConfig({
       }
     }
   ],
-  base: '/RivasEmilio.github.io/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
