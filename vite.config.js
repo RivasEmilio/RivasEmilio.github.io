@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { copyFileSync } from 'fs'
+import { copyFileSync, existsSync } from 'fs'
 import { join } from 'path'
 
 // https://vite.dev/config/
@@ -10,10 +10,11 @@ export default defineConfig({
     {
       name: 'copy-404',
       closeBundle() {
-        copyFileSync(
-          join(__dirname, 'public', '404.html'),
-          join(__dirname, 'dist', '404.html')
-        )
+        const source404 = join(__dirname, 'public', '404.html')
+        const dest404 = join(__dirname, 'dist', '404.html')
+        if (existsSync(source404)) {
+          copyFileSync(source404, dest404)
+        }
       }
     }
   ],
